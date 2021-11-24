@@ -19,7 +19,7 @@ If you find this repository useful in your work, please cite:
 This is a python implementation of [ASM-Net: Category-level Pose and Shape Estimation Using Parametric Deformation](https://sites.google.com/view/srs-lab/asm-net), a BMVC 2021 paper.
 
 This repository includes:
-- Test code of ASM-Net on NOCS-Real2019 dataset
+- Test code of ASM-Net on NOCS REAL275 dataset
 - Download link of the pretrained weights
 - Active Shape Models for point cloud
 
@@ -30,11 +30,11 @@ Our codes have been tested with
 - torch==1.7.0+cu110
 - pytorch3d==0.4.0
 
-## Test on NOCS-Real2019 dataset
+## Test on NOCS REAL275 dataset
 ### Prepare dataset
-Please download the NOCS-Real2019 dataset from [this repository](https://github.com/hughw19/NOCS_CVPR2019#datasets).
+Please download the NOCS REAL275 dataset from [this repository](https://github.com/hughw19/NOCS_CVPR2019#datasets).
 We need "Test" of Real dataset, Ground truth pose annotation, and Object meshes.
-Also, download the detection masks of Mask-RCNN on NOCS-Real2019 dataset.
+Also, download the detection masks of Mask-RCNN on NOCS REAL275 dataset.
 [Download link](https://drive.google.com/file/d/1z6u3Oo3eza9qftoiB21YVhP3W-hovAYv/view?usp=sharing)
 
 Store these files under ```asm-net/data/```.
@@ -51,11 +51,11 @@ Now, we assume your asm-net repository consist of:
 ```
 asm-net
 ├── ASM_Net       ... Network description 
-├── NOCS_loader   ... Codes for performance evaluation on NOCS-Real2019 dataset.
+├── NOCS_loader   ... Codes for performance evaluation on NOCS REAL275 dataset.
 ├── dataset        
 |      ├── gts             ... Ground truth pose annotation
 |      ├── obj_models      ... Object meshes 
-|      ├── real_test       ... "Test" set of NOCS-Real2019 dataset
+|      ├── real_test       ... "Test" set of NOCS REAL275 dataset
 |      └── masks_real_test ... Detection mask by Mask-RCNN.
 └── params         
        ├── asm_params  ... Parameters for ASM.
